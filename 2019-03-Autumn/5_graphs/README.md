@@ -186,7 +186,7 @@ def find_judge(N: int, trust: list):
 
 #### Driver For Solution
 
-The Python solution is [here](./town_judge/town_judge.py]).
+The Python solution is [here](./town_judge/town_judge.py).
 
 <!-- Don't remove -->
 Go to [Top](#top)
