@@ -23,21 +23,40 @@ Problems and solutions for Trees session on February 14, 2020.
 
 <a name="p1"/>
 
-### 1. PROBLEM 1 TODO :bug:
+### 1. Fibonacci
 
-Source: TODO :bug:
+Source: [GeeksForGeeks](https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/)
 
 #### Scenario
 
-Problem Statement TODO :bug:
+Given an integer `n`, find the `n`th term of the Fibonacci sequence.
 
 #### Example Input
 
-If the problem is simple enough, remove this section. TODO :bug:
+If the sequence starts as `0, 1, 1, 2, 3, 5, 8, 13, 21`, I should get the following output:
+
+```
+Input: n = 1    Output: 0
+Input: n = 4    Output: 2
+Input: n = -1   Output: 0
+```
 
 #### Function Signature
 
-TODO :bug:
+C++:
+
+```c++
+int fibonacci(int n) {
+    // your code here
+}
+```
+
+Python:
+
+```python
+def fibonacci(n):
+    # your code here
+```
 
 <!-- Don't remove -->
 Go to [Solution](#s1)   [Top](#top)
@@ -94,21 +113,40 @@ Go to [Solution](#s3)   [Top](#top)
 <!-- Don't remove -->
 <a name="s1"/>
 
-### 1. SOLUTION 1 TODO :bug:
+### 1. Fibonacci
 
-Source: TODO :bug:
+Source: [GeeksForGeeks](https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/)
 
-#### Naive/Simple Solution
+#### Solution
 
-TODO :bug:
+We can calculate the `n`th term of the Fibonacci sequence by establishing 
+the first two numbers in the sequence as base cases.
 
-#### Optimal Solution
+The first term is 0; the second term is 1. So, if n <= 1, we know the 
+value should be 0. Likewise, if n == 2, we know the value is 1.
 
-TODO :bug:
+We establish a recursive call which takes the sum of the two previous 
+terms in the sequence; the recursive implementation is as follows:
 
-#### Testing The Solutions OR Driver For Solution
+```python3
+def fib(n):
+    if n < 2: return 0
+    if n == 2: return 1
+    return fib(n - 1) + fib(n - 2)
+```
 
-TODO :bug:
+#### Driver For Solution
+
+The solution code is [in the repository](https://github.com/UWB-ACM/CTCI/2020-01-Winter/4_trees/fibonacci/fib.py).
+
+It produces the following output:
+
+```console
+$ python3 fib.py
+Testing for Nth term of Fibonacci sequence.
+N = 0:  0
+N = 5:  3
+```
 
 <!-- Don't remove -->
 Go to [Top](#top)
